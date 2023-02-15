@@ -1,13 +1,27 @@
-name: first workflow
-on:
-  push:
+name: My first workflow
+on: 
+   push: 
     branches: ["main"]
-  workflow_dispatch:
-
+   workflow_dispatch:
+  
 jobs:
-  build:
+  bulid:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
       - name: Greet user
-        run: echo welocome to github actions
+        run: echo welcome to github actions
+        
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Greet user
+        run: echo testing the code successfully
+        
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Greet user
+        run: echo deployment completed succesfully
